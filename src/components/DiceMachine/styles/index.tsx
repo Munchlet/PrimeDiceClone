@@ -3,6 +3,13 @@ import { SelectedTabProps } from "../../../typings";
 
 export const Container = styled.div`
 	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: 100vh;
+`;
+
+export const SubContainer = styled.div`
+	display: flex;
 	flex-direction: row;
 	padding: 3rem 4rem;
 	justify-content: center;
