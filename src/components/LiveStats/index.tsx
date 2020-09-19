@@ -28,9 +28,9 @@ const LiveStatsHeader = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	white-space: nowrap;
-	/* height: 48px; */
 	padding: 0 8px;
 	flex: 0 1 48px;
+	border-radius: 0.5rem 0.5rem 0 0;
 `;
 
 const LiveStatsBody = styled.div`
