@@ -101,6 +101,7 @@ const HistoryTickerContainer = styled.div`
 	display: flex;
 	overflow-x: hidden;
 	align-items: center;
+	margin-top: 6px;
 `;
 
 const TickerItem = styled.div<ColoredAmountProps>`
