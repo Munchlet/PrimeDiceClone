@@ -1,0 +1,42 @@
+import styled from "styled-components";
+import { SelectedTabProps } from "../../../typings";
+
+export const Container = styled.div`
+	display: flex;
+	flex-direction: row;
+	padding: 3rem 4rem;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 80%;
+	margin: 0 auto;
+`;
+
+export const SlotBoard = styled.div`
+	flex: 2 0 450px;
+	background-color: white;
+	border-radius: 0.5rem;
+	height: 353px;
+	max-width: 730px;
+`;
+
+export const SlotBoardTabContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	height: 48px;
+`;
+
+export const SlotBoardTab = styled.div<SelectedTabProps>`
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	background-color: ${(props) => (props.selected ? "white" : "#ECEDF0")};
+	font-size: 0.75rem;
+	font-weight: 600;
+	color: ${(props) => (props.selected ? "rgb(102, 107, 125)" : "rgb(132, 136, 155)")};
+	cursor: ${(props) => (props.selected ? "default" : "pointer")};
+`;
+
+SlotBoardTab.defaultProps = {
+	selected: false,
+};
