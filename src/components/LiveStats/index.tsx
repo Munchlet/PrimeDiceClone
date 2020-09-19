@@ -105,13 +105,13 @@ const HistoryTickerContainer = styled.div`
 
 const TickerItem = styled.div<ColoredAmountProps>`
 	background: rgb(23, 38, 99);
-	height: 20px;
+	height: 28px;
 	margin-left: 4px;
 	border-radius: 0.8rem;
 	color: ${(props) =>
 		props.amount !== undefined && Number(props.amount) >= 0 ? "rgb(0, 228, 73)" : "rgb(237, 3, 96)"};
 	padding: 0.2rem 0.6rem;
-	font-size: 0.8rem;
+	font-size: 0.7rem;
 	text-align: center;
 	line-height: 1.2rem;
 `;
