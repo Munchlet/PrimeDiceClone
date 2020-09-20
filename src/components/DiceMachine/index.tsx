@@ -9,10 +9,10 @@ export default function DiceMachine() {
 				<SubContainer>
 					<SlotBoard>
 						<SlotBoardTabContainer>
-							<SlotBoardTab selected>
+							<SlotBoardTab selected side="left">
 								<span>Manual</span>
 							</SlotBoardTab>
-							<SlotBoardTab>
+							<SlotBoardTab side="right">
 								<span>Auto</span>
 							</SlotBoardTab>
 						</SlotBoardTabContainer>

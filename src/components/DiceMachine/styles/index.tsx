@@ -42,8 +42,11 @@ export const SlotBoardTab = styled.div<SelectedTabProps>`
 	font-weight: 600;
 	color: ${(props) => (props.selected ? "rgb(102, 107, 125)" : "rgb(132, 136, 155)")};
 	cursor: ${(props) => (props.selected ? "default" : "pointer")};
+	border-top-right-radius: ${(props) => (props.side === "right" ? "0.5rem" : "0rem")};
+	border-top-left-radius: ${(props) => (props.side === "left" ? "0.5rem" : "0rem")};
 `;
 
 SlotBoardTab.defaultProps = {
 	selected: false,
+	side: "left",
 };
