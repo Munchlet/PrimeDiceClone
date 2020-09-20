@@ -16,8 +16,9 @@ const StyledThumb = styled.div`
 	width: 36px;
 	background-color: #ffffff;
 	background-image: url(${SliderThumb});
-	object-fit: contain;
-	background-size: 50px;
+	background-size: 50px 20px;
+	background-position: center;
+	background-repeat: no-repeat;
 	cursor: grab;
 	border-radius: 0.2rem;
 	top: -5px;

@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="386" height="36"><path fill="none" d="M-1-1h388v38H-1z"/><g><path fill="#b7b7b7" stroke="null" stroke-opacity="null" stroke-width="null" d="M10.5 4.137h369v6h-369zM10.555 13.794h369v6h-369zM10.893 24.609h369v6h-369z"/></g></svg>
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_2" y2="42.89845" x2="24.81482" y1="5.26817" x1="24.81482" fill-opacity="null" stroke-opacity="null" stroke-width="0.8" stroke="#999999" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_3" y2="42.89845" x2="28.74365" y1="5.26817" x1="28.74365" fill-opacity="null" stroke-opacity="null" stroke-width="0.8" stroke="#999999" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_4" y2="42.82438" x2="20.66598" y1="5.1941" x1="20.66598" fill-opacity="null" stroke-opacity="null" stroke-width="0.8" stroke="#999999" fill="none"/>
+ </g>
+</svg>
