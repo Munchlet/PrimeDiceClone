@@ -11,10 +11,10 @@ export const Container = styled.div`
 export const SubContainer = styled.div`
 	display: flex;
 	flex-direction: row;
-	padding: 3rem 4rem;
+	padding: 2.6rem 4rem;
 	justify-content: center;
 	flex-wrap: wrap;
-	width: 80%;
+	width: 92%;
 	margin: 0 auto;
 `;
 
