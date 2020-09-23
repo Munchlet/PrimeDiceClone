@@ -1,9 +1,10 @@
 import { Refresh, TransitEnterexit } from "@styled-icons/material-sharp";
-import { ScreenSize, formatMoney } from "../../utils/Helper";
-import { VictoryChart, VictoryLine, VictoryTheme } from "victory";
-import React, { useState, useEffect } from "react";
+import { formatMoney } from "../../utils/Helper";
+import { VictoryLine } from "victory";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { ColoredAmountProps } from "../../typings";
+import useInterval from "@use-it/interval";
 
 const LiveStatsContainer = styled.div`
 	flex: 1 0 280px;
@@ -121,41 +122,39 @@ TickerItem.defaultProps = {
 	amount: 0.0,
 };
 
-let x = 0;
+let x = 2;
 
 export default function LiveStats() {
-	const [tickers, setTickers] = useState<Array<number>>([]);
+	const [tickers, setTickers] = useState<Array<number>>([1]);
 	const [graphValues, setGraphValues] = useState<Array<{ x: number; y: number }>>([{ x: 1, y: 2 }]);
 	const [winCount, setWinCount] = useState(0);
 	const [lossCount, setLossCount] = useState(0);
 
-	useEffect(() => {
-		const interval = setInterval(() => {
-			const randomNumber = Math.floor(Math.random() * 201) - 100;
-			setGraphValues((old) => {
-				const t: Array<{ x: number; y: number }> = [...old];
-				t.push({
-					x,
-					y: randomNumber,
-				});
-
-				console.log({
-					x,
-					y: randomNumber,
-				});
-
-				x += 1;
-				return t;
+	useInterval(() => {
+		console.log(`here`);
+		const randomNumber = Math.floor(Math.random() * 201) - 100;
+		setGraphValues((old) => {
+			const t: Array<{ x: number; y: number }> = [...old];
+			t.push({
+				x,
+				y: randomNumber,
 			});
 
-			setTickers((old) => {
-				const t: Array<number> = [...old];
-				t.push(randomNumber);
-				return t;
+			console.log({
+				x,
+				y: randomNumber,
 			});
-		}, 2000);
-		return () => clearInterval(interval);
-	}, []);
+
+			x += 1;
+			return t;
+		});
+
+		setTickers((old) => {
+			const t: Array<number> = [...old];
+			t.push(randomNumber);
+			return t;
+		});
+	}, 5000);
 
 	return (
 		<LiveStatsContainer>

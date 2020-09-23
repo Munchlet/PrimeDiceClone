@@ -50,3 +50,13 @@ SlotBoardTab.defaultProps = {
 	selected: false,
 	side: "left",
 };
+
+export const FormContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	padding: 2rem 1rem;
+`;
+
+export const FormRowOne = styled.div`
+	display: flex;
+`;
