@@ -74,8 +74,7 @@ export default function InputWithImage(props: InputWithImageProps) {
 			<CustomInputContainer>
 				<CustomInput type="number" value="0.00" />
 				<IconButton />
-				<TextButton>½</TextButton>
-				<TextButton>2×</TextButton>
+				{props.subtexts && props.subtexts.map((val) => <TextButton>{val}</TextButton>)}
 			</CustomInputContainer>
 		</Container>
 	);
@@ -83,4 +82,5 @@ export default function InputWithImage(props: InputWithImageProps) {
 
 type InputWithImageProps = {
 	title: String;
+	subtexts?: Array<String>;
 };

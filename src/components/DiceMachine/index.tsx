@@ -27,8 +27,8 @@ export default function DiceMachine() {
 					</SlotBoardTabContainer>
 					<FormContainer>
 						<FormRowOne>
-							<InputWithImage title="Bet Amount"  />
-							<InputWithImage title="Profit on Win"  />
+							<InputWithImage title="Bet Amount" subtexts={[`½`, `2×`]} />
+							<InputWithImage title="Profit on Win" />
 						</FormRowOne>
 					</FormContainer>
 				</SlotBoard>
