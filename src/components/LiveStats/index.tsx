@@ -140,6 +140,7 @@ export default function LiveStats() {
 				y: randomNumber,
 			});
 
+			if (t.length > 8) t.shift();
 			console.log({
 				x,
 				y: randomNumber,
@@ -152,9 +153,10 @@ export default function LiveStats() {
 		setTickers((old) => {
 			const t: Array<number> = [...old];
 			t.push(randomNumber);
+			if (t.length > 8) t.shift();
 			return t;
 		});
-	}, 5000);
+	}, 2000);
 
 	return (
 		<LiveStatsContainer>
