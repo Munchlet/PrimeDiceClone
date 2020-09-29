@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import SliderThumb from "../../assets/slider.svg";
+import CoinIcon from "../../assets/coin.svg";
 
 const Container = styled.div`
 	display: flex;
@@ -42,19 +42,29 @@ const CustomInput = styled.input`
 `;
 
 const IconButton = styled.div`
-	background-image: url(${SliderThumb});
-	background-size: 50px 50px;
+	background-image: url(${CoinIcon});
+	background-size: contain;
 	background-repeat: no-repeat;
+	height: 100%;
+	fill: black;
 	flex: 1;
 `;
 
 const TextButton = styled.div`
 	text-align: center;
 	flex: 1;
-	background-color: #ecedf0;
+	background-color: #ECEDF0;
 	border-radius: 4px;
 	height: 100%;
-	line-height: 42px;
+	line-height: 2.5rem;
+	font-weight: 600;
+	color: #6a6e82;
+	font-size: 0.9rem;
+	letter-spacing: -1px;
+	cursor: pointer;
+	&:hover {
+		background-color: #DFE0E5;
+	}
 `;
 
 export default function InputWithImage(props: InputWithImageProps) {
@@ -64,8 +74,8 @@ export default function InputWithImage(props: InputWithImageProps) {
 			<CustomInputContainer>
 				<CustomInput type="number" value="0.00" />
 				<IconButton />
-				<TextButton>1/2</TextButton>
-				<TextButton>2x</TextButton>
+				<TextButton>½</TextButton>
+				<TextButton>2×</TextButton>
 			</CustomInputContainer>
 		</Container>
 	);
