@@ -67,12 +67,12 @@ const TextButton = styled.div`
 	}
 `;
 
-export default function InputWithImage(props: InputWithImageProps) {
+export default function InputWithImage(props: Props) {
 	return (
 		<Container>
 			<InputLabel>{props.title}</InputLabel>
 			<CustomInputContainer>
-				<CustomInput type="number" value="0.00" />
+				<CustomInput type="number" value={props.value} />
 				<IconButton />
 				{props.subtexts && props.subtexts.map((val) => <TextButton>{val}</TextButton>)}
 			</CustomInputContainer>
@@ -80,7 +80,12 @@ export default function InputWithImage(props: InputWithImageProps) {
 	);
 }
 
-type InputWithImageProps = {
-	title: String;
-	subtexts?: Array<String>;
+type Props = {
+	title: string;
+	subtexts?: Array<string>;
+	value?: number;
 };
+
+InputWithImage.defaultProps = {
+	value: 0
+} as Partial<Props>;
