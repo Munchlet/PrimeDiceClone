@@ -60,3 +60,10 @@ export const FormContainer = styled.div`
 export const FormRow = styled.div`
 	display: flex;
 `;
+
+export const FormRowContainer = styled(FormRow)`
+	background-color: rgb(236, 237, 240);
+	margin: 1rem 0.5rem 1rem 0.5rem;
+	padding: 8px;
+	border-radius: 8px;
+`;
