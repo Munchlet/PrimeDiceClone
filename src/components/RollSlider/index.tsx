@@ -53,9 +53,8 @@ const SliderValue = styled.span`
 	font-size: 12px;
 `;
 
-export default function RollSlider(props: Props) {
+export default function RollSlider({ defaultValue, onSliderChange }: Props) {
 	const [play] = useSound(SliderSound);
-	const [value, setValue] = useState(49.99);
 
 	return (
 		<Container>
@@ -63,12 +62,12 @@ export default function RollSlider(props: Props) {
 			<StyledSlider
 				min={2}
 				max={98}
-				defaultValue={[value]}
+				defaultValue={[defaultValue]}
 				renderTrack={Track}
 				renderThumb={Thumb}
 				onChange={(v) => {
 					play();
-					if (typeof v === "number") props.onSliderChange(v - 0.01);
+					if (typeof v === "number") onSliderChange(v);
 				}}
 			/>
 			<SliderValue>100</SliderValue>
@@ -78,4 +77,9 @@ export default function RollSlider(props: Props) {
 
 type Props = {
 	onSliderChange: (val: number) => void;
+	defaultValue: number;
 };
+
+RollSlider.defaultProps = {
+	defaultValue: 49.99
+} as Partial<Props>;
