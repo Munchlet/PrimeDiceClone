@@ -29,6 +29,7 @@ const CustomInputContainer = styled.div`
 `;
 const CustomInput = styled.input`
 	font-size: 1rem;
+	font-weight: 600;
 	width: 100%;
 	border: none;
 	margin: auto 2px auto;
@@ -38,6 +39,7 @@ const CustomInput = styled.input`
 	height: 90%;
 	border: none;
 	border-radius: 4px;
+	font-family: 'Open Sans';
 `;
 
 const IconButton = styled.div`
