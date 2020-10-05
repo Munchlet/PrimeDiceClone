@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import CoinIcon from "../../assets/coin.svg";
 import { AttachMoney } from "@styled-icons/material-sharp";
 
 const Container = styled.div`
