@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CoinIcon from "../../assets/coin.svg";
+import { AttachMoney } from "@styled-icons/material-sharp";
 
 const Container = styled.div`
 	display: flex;
@@ -43,12 +44,11 @@ const CustomInput = styled.input`
 `;
 
 const IconButton = styled.div`
-	background-image: url(${CoinIcon});
-	background-size: contain;
-	background-repeat: no-repeat;
 	height: 100%;
-	fill: black;
 	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 const TextButton = styled.div`
@@ -74,7 +74,7 @@ export default function InputWithImage(props: Props) {
 			<InputLabel>{props.title}</InputLabel>
 			<CustomInputContainer>
 				<CustomInput type="number" value={props.value} />
-				<IconButton />
+				<IconButton><AttachMoney size={24} /></IconButton>
 				{props.subtexts && props.subtexts.map((val) => <TextButton>{val}</TextButton>)}
 			</CustomInputContainer>
 		</Container>
