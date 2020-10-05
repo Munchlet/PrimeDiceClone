@@ -64,6 +64,6 @@ export const FormRow = styled.div`
 export const FormRowContainer = styled(FormRow)`
 	background-color: rgb(236, 237, 240);
 	margin: 1rem 0.5rem 1rem 0.5rem;
-	padding: 8px;
+	padding: 1rem 0.5rem 1rem 0.5rem;
 	border-radius: 8px;
 `;
