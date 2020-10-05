@@ -13,7 +13,14 @@ import RollSlider from "../RollSlider";
 import InputWithImage from "../InputWithImage";
 
 export default function DiceMachine() {
-	const [sliderValue, setSliderValue] = useState(49.99);
+	const [rollOver, setRollOver] = useState(49.99);
+	const [winChance, setWinChance] = useState(50.0);
+	const [payout, setPayout] = useState(49.99);
+
+	const setSliderChange = (val: number) => {
+		setRollOver(val - 0.01);
+		setWinChance(100 - val);
+	};
 
 	return (
 		<Container>
@@ -33,15 +40,15 @@ export default function DiceMachine() {
 							<InputWithImage title="Profit on Win" />
 						</FormRow>
 						<FormRow>
-							<InputWithImage title="Roll Over" value={sliderValue} />
-							<InputWithImage title="Payout" />
-							<InputWithImage title="Win Chance" />
+							<InputWithImage title="Roll Over" value={rollOver} />
+							<InputWithImage title="Payout" value={payout} />
+							<InputWithImage title="Win Chance" value={winChance} />
 						</FormRow>
 					</FormContainer>
 				</SlotBoard>
 				<LiveStats />
 			</SubContainer>
-			<RollSlider onSliderChange={(val: number) => setSliderValue(val)} />
+			<RollSlider onSliderChange={(val: number) => setSliderChange(val)} />
 		</Container>
 	);
 }
