@@ -57,6 +57,6 @@ export const FormContainer = styled.div`
 	padding: 2rem 1rem;
 `;
 
-export const FormRowOne = styled.div`
+export const FormRow = styled.div`
 	display: flex;
 `;

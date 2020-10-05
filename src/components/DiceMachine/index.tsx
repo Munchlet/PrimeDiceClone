@@ -6,7 +6,7 @@ import {
 	SubContainer,
 	Container,
 	FormContainer,
-	FormRowOne,
+	FormRow,
 } from "./styles";
 import LiveStats from "../LiveStats";
 import RollSlider from "../RollSlider";
@@ -26,10 +26,10 @@ export default function DiceMachine() {
 						</SlotBoardTab>
 					</SlotBoardTabContainer>
 					<FormContainer>
-						<FormRowOne>
+						<FormRow>
 							<InputWithImage title="Bet Amount" subtexts={[`½`, `2×`]} />
 							<InputWithImage title="Profit on Win" />
-						</FormRowOne>
+						</FormRow>
 					</FormContainer>
 				</SlotBoard>
 				<LiveStats />
