@@ -12,15 +12,13 @@ import {
 import LiveStats from "../LiveStats";
 import RollSlider from "../RollSlider";
 import InputWithImage from "../InputWithImage";
+import { SettingsStore } from "../../utils/Store";
 
 export default function DiceMachine() {
-	const [rollOver, setRollOver] = useState(49.99);
-	const [winChance, setWinChance] = useState(50.0);
-	const [payout, setPayout] = useState(49.99);
-
+	const { rollOver, winChance, payout, isRollOver, setRollAndWin } = SettingsStore();
 	const setSliderChange = (val: number) => {
-		setRollOver(val - 0.01);
-		setWinChance(100 - val);
+		if (isRollOver) return setRollAndWin(val - 0.01, parseFloat((99 / (99.99 - val - 0.01)).toFixed(4)), 100 - val);
+		return setRollAndWin(val - 0.01, parseFloat((99 / (val - 0.01)).toFixed(4)), 100 - val);
 	};
 
 	return (
@@ -49,7 +47,7 @@ export default function DiceMachine() {
 				</SlotBoard>
 				<LiveStats />
 			</SubContainer>
-			<RollSlider onSliderChange={(val: number) => setSliderChange(val)} />
+			<RollSlider onSliderChange={(val: number) => setSliderChange(val)} defaultValue={49.99} />
 		</Container>
 	);
 }
